@@ -1,8 +1,9 @@
 {
   "name": "react-slide-button",
-  "version": "1.0.7",
+  "version": "1.0.0",
   "description": "Custom react slide button for both desktop and mobile.",
   "repository": "https://github.com/A-Rehman01/react-slide-button",
+  "homepage": "https://github.com/A-Rehman01/react-slide-button",
   "main": "build/index.js",
   "types": "src/index.d.ts",
   "scripts": {
