@@ -4,7 +4,7 @@ Custom react slide button for both desktop and mobile.
 This button uses [react-swipeable](https://github.com/FormidableLabs/react-swipeable) to detect the swipe action.
 
 <center>
-<img src="https://github.com/A-Rehman01/react-slide-button/blob/main/demo.gif" alt="demo.gif" height="200px" />
+<img src="https://github.com/A-Rehman01/react-slide-button/blob/main/demo.gif" alt="demo.gif" height="100px" />
 </center>
 
 ## Installation
