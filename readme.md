@@ -6,7 +6,7 @@ This button uses [react-swipeable](https://github.com/FormidableLabs/react-swipe
 krde he cahnge
 
 <center>
-<img src="https://zeus2198.github.io/asset/swipe-mock.gif" />
+<img src="https://github.com/A-Rehman01/react-slide-button/blob/main/demo.gif" alt="demo.gif" />
 </center>
 
 ## Installation
