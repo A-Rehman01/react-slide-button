@@ -2,7 +2,7 @@ import * as React from "react"
 interface SlideProps {
   mainText: any
   overlayText: any
-  onSlideDone: function
+  onSlideDone: Function
   reset?: Number
   classList?: String
   overlayClassList?: String

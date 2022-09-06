@@ -1,6 +1,6 @@
 import React from "react"
-// import SlideButton from "react-swipezor"
-import SlideButton from "./slide-button/SlideButton"
+import SlideButton from "react-slide-button"
+// import SlideButton from "./slide-button/SlideButton"
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter"
 import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx"
 import css from "react-syntax-highlighter/dist/esm/languages/prism/css"
