@@ -2,7 +2,7 @@
   "name": "demo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/A-Rehman01/react-slide-button",
+  "homepage": "https://github.com/react-slide-button",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -11,7 +11,8 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "react-syntax-highlighter": "^13.5.3",
-    "react-toastify": "^6.0.8"
+    "react-toastify": "^6.0.8",
+    "react-swipeable": "^5.5.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
