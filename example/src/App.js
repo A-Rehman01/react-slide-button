@@ -24,7 +24,7 @@ function App() {
         position="bottom-center"
       />
       <a
-        href="https://github.com/xxxzeus/react-swipezor"
+        href="https://github.com/A-Rehman01/react-slide-button"
         className="github-corner"
         aria-label="View source on GitHub"
       >
@@ -58,7 +58,7 @@ function App() {
       </a>
       <div className="wrapper">
         <center>
-          <h1 style={{ fontFamily: "monospace" }}>react-swipezor</h1>
+          <h1 style={{ fontFamily: "monospace" }}>react-slide-button</h1>
         </center>
         <div className="content-wrapper">
           <div className="col heading centered">basic usage</div>
@@ -266,8 +266,7 @@ const [reset, setReset] = useState(0);
                 mainText="Slide me"
                 overlayText="S I K E"
                 reset={reset}
-                caret={<img src="./caret.png" />}
-                customCaretWidth={200}
+                caret={<img src="./caret.png" alt="img" />}
                 onSlideDone={() => {
                   toast("Done!", { type: "info" })
                   console.log("Done!")

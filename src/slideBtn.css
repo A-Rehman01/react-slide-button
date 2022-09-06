@@ -1,7 +1,7 @@
-.swipezor-but * {
+.slide-but * {
   box-sizing: border-box;
 }
-.swipezor-but {
+.slide-but {
   border: 2px solid #444;
   min-width: 200px;
   padding: 11px;
@@ -15,11 +15,11 @@
   user-select: none;
   /* box-sizing: border-box; */
 }
-.swipezor-but * {
+.slide-but * {
   pointer-events: none;
   user-select: none;
 }
-.swipezor-but .swipezor-overlay {
+.slide-but .slide-overlay {
   position: absolute;
   left: 0;
   top: 0;
@@ -35,12 +35,12 @@
   align-items: center;
   justify-content: center;
 }
-.swipezor-but .swipezor-overlay .swipezor-overlay-wrapper {
+.slide-but .slide-overlay .slide-overlay-wrapper {
   position: relative;
   height: 100%;
   width: 100%;
 }
-.swipezor-but .swipezor-overlay .swipezor-caret-wrapper {
+.slide-but .slide-overlay .slide-caret-wrapper {
   position: absolute;
   max-width: 45px;
   min-width: 0;
@@ -55,7 +55,7 @@
   padding: 10px;
   justify-content: center;
 }
-.swipezor-but .swipezor-overlay .swipezor-overlay-txt {
+.slide-but .slide-overlay .slide-overlay-txt {
   position: absolute;
   width: 100%;
   left: 0;

@@ -34,6 +34,7 @@ const SlideButton = ({
       setSlideComplete(false)
       setOverlayWidth(customCaretWidth)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reset])
 
   const handlers = useSwipeable({

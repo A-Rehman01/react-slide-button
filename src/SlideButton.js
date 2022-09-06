@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import { useSwipeable } from "react-swipeable"
 import Arrow from "./arrow.png"
 
-import "./swipezor.css"
+import "./slideBtn.css"
 
 const dirTypes = ["Left", "Down", "Up"]
 
@@ -11,39 +11,39 @@ const findLeft = (element) => {
   return rec.left + window.scrollX
 }
 
-const SwipeButton = ({
+const SlideButton = ({
   mainText,
   overlayText,
-  onSwipeDone,
+  onSlideDone,
   reset,
   classList = "",
   overlayClassList = "",
   caretClassList = "",
   delta = 10,
-  minSwipeWidth = 0.6,
-  minSwipeVelocity = 0.6,
+  minSlideWidth = 0.6,
+  minSlideVelocity = 0.6,
   caret = null,
   customCaretWidth = 40
 }) => {
   const [overlayWidth, setOverlayWidth] = useState(customCaretWidth)
-  const [swipeComplete, setSwipeComplete] = useState(false)
+  const [slideComplete, setSlideComplete] = useState(false)
   const buttonRef = useRef()
 
   useEffect(() => {
     if (reset) {
-      setSwipeComplete(false)
+      setSlideComplete(false)
       setOverlayWidth(customCaretWidth)
     }
   }, [reset])
 
   const handlers = useSwipeable({
     onSwipedRight: (data) => {
-      if (swipeComplete) return
+      if (slideComplete) return
       const butWidth = buttonRef.current.offsetWidth
-      if (data.velocity > minSwipeVelocity) {
+      if (data.velocity > minSlideVelocity) {
         setOverlayWidth(butWidth)
-        setSwipeComplete(true)
-        setTimeout(() => onSwipeDone(), 100)
+        setSlideComplete(true)
+        setTimeout(() => onSlideDone(), 100)
       } else {
         const offsetLeft = findLeft(buttonRef.current)
         const startPos = Math.abs(data.initial[0] - offsetLeft)
@@ -52,16 +52,16 @@ const SwipeButton = ({
           (data.event.type === "touchend"
             ? data.event.changedTouches[0].clientX - offsetLeft
             : data.event.offsetX) >
-            minSwipeWidth * butWidth
+            minSlideWidth * butWidth
         ) {
           setOverlayWidth(butWidth)
-          setSwipeComplete(true)
-          setTimeout(() => onSwipeDone(), 100)
+          setSlideComplete(true)
+          setTimeout(() => onSlideDone(), 100)
         } else setOverlayWidth(customCaretWidth)
       }
     },
     onSwiping: (data) => {
-      if (swipeComplete || dirTypes.includes(data.dir)) return
+      if (slideComplete || dirTypes.includes(data.dir)) return
       const offsetLeft = findLeft(buttonRef.current)
       const startPos = Math.abs(data.initial[0] - offsetLeft)
       if (startPos <= 100 + customCaretWidth) {
@@ -81,7 +81,7 @@ const SwipeButton = ({
 
   return (
     <div
-      className={`swipezor-but ${classList}`}
+      className={`slide-but ${classList}`}
       {...handlers}
       ref={(t) => {
         handlers.ref(t)
@@ -89,16 +89,16 @@ const SwipeButton = ({
       }}
     >
       <div
-        className={`swipezor-overlay ${overlayClassList}`}
+        className={`slide-overlay ${overlayClassList}`}
         style={{ width: overlayWidth }}
       >
-        <div className="swipezor-overlay-wrapper">
+        <div className="slide-overlay-wrapper">
           <div
             style={{
               width: customCaretWidth,
               maxWidth: customCaretWidth
             }}
-            className={`swipezor-caret-wrapper ${caretClassList}`}
+            className={`slide-caret-wrapper ${caretClassList}`}
           >
             {caret ? (
               caret
@@ -106,7 +106,7 @@ const SwipeButton = ({
               <img src={Arrow} alt="caret" style={{ maxWidth: "100%" }} />
             )}
           </div>
-          <div className="swipezor-overlay-txt" style={{ width: overlayWidth }}>
+          <div className="slide-overlay-txt" style={{ width: overlayWidth }}>
             {overlayText}
           </div>
         </div>
@@ -117,4 +117,4 @@ const SwipeButton = ({
   )
 }
 
-export default SwipeButton
+export default SlideButton

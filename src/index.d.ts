@@ -1,18 +1,18 @@
 import * as React from "react"
-interface SwipezorProps {
+interface SlideProps {
   mainText: any
   overlayText: any
-  onSwipeDone: function
+  onSlideDone: function
   reset?: Number
   classList?: String
   overlayClassList?: String
   caretClassList?: String
   delta?: Number
-  minSwipeWidth?: Number
-  minSwipeVelocity?: Number
+  minSlideWidth?: Number
+  minSlideVelocity?: Number
   caret?: any
   customCaretWidth?: Number
 }
-declare class Swipezor extends React.Component<SwipezorProps, any> {}
+declare class Slide extends React.Component<SlideProps, any> {}
 
-export default Swipezor
+export default Slide
